@@ -1,0 +1,45 @@
+# Prologue
+
+I was working for a company that worked with data on the stock market, it was a startup and they needed a program that just took all the data they had and just pushed it through some calculations and gave a nice chart in the end with all the results from each calculation, this program took me a week to write, twice
+
+# Beginning
+
+They wanted a software that can take data and give them all the results they wanted with just one button press and i realized that this would take too long to create on the lower level so i convinced them that there is no need to create a dedicated piece of software for this, i can just make this on the web and they can just use it there, another benefit of the web was that i could update any equation on my computer and they would update on everyone elses computers as well and no one would need to ask me for the latest executable every couple of days
+
+With the prospect of fast development, they agreed and i got to work on the project
+
+I opened nvim, created a new file and made a rough structure of the UI in html - it was never going to change so there was no need to make it dynamic - at this point i didnt really know how to make a chart or how to even get data from a file, so i asked chatgpt how to make a chart, it gave a few options but i wanted full control over what i was doing and didnt want any magic happening in front of me so i went with D3.js
+
+D3 is a great library that is extremely versatile and allows you to create any type of chart that you want, but since its so flexible its also very difficult to learn but its a good thing i have AI right? We'll see
+
+This was near the beginning of 2024 and i was a full vide coder at this point, AI was the future and the singularity was around the corner and i was going to ride that wave like no one could imagine and so i started asking mr. gippity how to do this, where should i put this thing, what to do here and in the end i just went 'what am i doing? clearly i just need to give the AI all of my code and then it'll be able to figure out what to do, OBVIOUSLY!'
+
+So that is what i did, i copied and gave the entire code to gippity, asked it to fix it then deleted all the original code in nvim and pasted all the slop the AI without even reading it, i mean the AI is clearly smarter than me why would i need to read anything
+
+This kept going for four days with me going back and forth and back and forth with the AI and the deeper i went and the more complicated the project got the more i realised, this AI is not figuring out anything
+
+In the beginning, things went smoothly, as they should, i told it what i need to do it gave me new code, i deleted all the old code and placed new code, if there were errors then i would just tell it 'here are the errors, fix them' and it actually would, but then the project actually got compilcated enough that the AI actually just couldnt handle it
+
+It would give me new code and would run it but then immediately there would be an error that i hadnt seen before, i would ask AI, it would say it knows exactly whats going on but then when i would try the new code, it would fail again and sometimes with more than the previous code it gave me
+
+I kept going and going hoping that things would just magically fix themselves but everything just kept getting worse and in the end i just had enough, nothing was working or getting even close to working so i just stopped asking the AI anything and just went and looked at the codebase myself, but you must remember im not a good programmer at this point, i only know the basics and how to make something look nice, i was not prepared for the trench of a dumpster fire that the AI had left behind
+
+In the entire time the AI was giving me code i had never read it, it had been 3-12H days where i would not stop working on the project even after i went home, i would just keep working on it, the fourth day was the final one where i went into the office and actually sat down to read the code and see what was written in it, i read for hours, jumped around everywhere and actually tried, for the first time, to see where the problems were happening but after 6 hours of looking at gibberish that there was no saving it, i had to start over
+
+In all the time i had been working on this, my boss had been asking me every now and then on the progress of the project, i had told him what was happening exactly as it was happening, "its going fine" to "the AI is messing up alot" to "theres alot of errors happening, its a pretty complicated project" the last i actually beleived in because i thought if the AI is having trouble with it then it must just be that hard
+
+On the fourth day my boss asked me again on the progress, i stood up and told him that the AI has messed up the codebase too much and there are too many problems that i cant solve them, the only thing i can do is start over and do it all myself
+
+He sighed and asked, is there really no other way and i had to reply with no - he said fine and moved on - i mean what else could he have done, program it himself, he has other things to do and also i never said that it was impossible but it'll just take a little longer, so i opened the file deleted everything and started from line 1
+
+I had technically worked on this project already, the architecture, the equations that needed to be calculated, the order of events for all tasks, it was all in my head and i didnt need to think about any of those things this time around, all i had to do was put everything into text
+
+Even though i knew what to do, i still didnt know how to do it, the AI wrote everything last time, all i did was sit there and structure everything, so i still needed to use AI, even if it was worthless it was still better than googling everthing one at a time - so i started again with most basic thing get the data from a file
+
+I designed the format for the data to be a simple csv with the headers of "date,data" and then just told the team any all data they want to put into the chart it has to be in this format - with that out of the way i got to work on actually getting the data from the file, this was pretty easy since the html input element just has a button that lets the user get a file from their computer, so i just created a sidebar and placed the button in there, problem 2 - solved
+
+Now there was the problem of actually parsing the file of all the data, arranging it in groups and then pushing all that data through all the equations that the team needed to use, this was the second hardest part of this project, i took some test data that i had created and did all the calculations by hand so that i knew later on all the calculations i was placing in the program were correct as well by comparing the programs results with mine
+
+Once all the data had been calculated, i created all the equations in js and punched in all the data, the answers were all correct, the equations had been translated from paper to program - next was the parser that took all the data from the file and seperated it into groups, just to keep things simple and quick i just placed all the columns of data in their own individual arrays, this allowed me to just check which index a specific date has and get the corresponding data for that date at the exact same index in the data array, the data traversal and collection was also complete
+
+At this point all the prerequisites were completed and ready to be placed, with those placed aside i started working on the 

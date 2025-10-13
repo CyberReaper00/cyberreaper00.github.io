@@ -47,6 +47,8 @@
 		.button {
 			color: white;
 			font-size: 18px;
+			font-family: cascadia;
+
 			padding: 12px 20px;
 			border: 2px white solid;
 			background: transparent;
@@ -65,17 +67,28 @@
 			font-size: 14px;
 			padding: 4px 20px;
 			font-family: cascadia;
+			color: hsl(0, 0%, 90%);
 			background: hsl(0, 0%, 0%);
 
-			a {
-				color: hsl(0, 0%, 90%);
-				text-decoration: none;
-			}
+			a { text-decoration: none; }
 		}
 
 		.site-link:hover {
 			cursor: pointer;
 			background: hsl(0, 0%, 10%);
+		}
+
+		.warning_box {
+			opacity: 0;
+			padding: 10px;
+			margin-top: 20px;
+			justify-self: center;
+
+			width: fit-content;
+			border: 4px solid yellow;
+
+			font-size: 16px;
+			font-family: cascadia;
 		}
 
 	</style>
@@ -91,18 +104,23 @@
 				<a href='https://github.com/CyberReaper00' target='_blank'>
 					<input class='button' type='button' value='Github'>
 				</a>
-				<a href='./projects.html' target='_blank'>
+
+				<a href='#' class='warn'>
 					<input class='button' type='button' value='Projects'>
 				</a>
 			</div>
 
+			<div class='warning_box'>
+				⚠️ Under Construction ⚠️
+			</div>
+
 		</div>
 
-		<div class='site-link'>
-			<a href='https://github.com/CyberReaper00/nahyan-siddiqui' target='_blank'>
+		<a href='#' class='warn'>
+			<div class='site-link'>
 				Website Source Code
-			</a>
-		</div>
+			</div>
+		</a>
 
 		<script src="index.js"></script>
 	</body>
