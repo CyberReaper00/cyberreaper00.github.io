@@ -1,6 +1,67 @@
 <html>
+	<style>
+
+		body {
+			margin: 0;
+			padding: 0;
+			background: #222;
+		}
+
+		td {
+			margin: 0;
+			padding: 0;
+		}
+
+		.topbar {
+			width: 99vw;
+			height: 10vh;
+		}
+
+		.logo {
+			color: #ddd;
+			background: white;
+			font-size: 1.3em;
+			position: fixed;
+			top: 2.2vh;
+			left: 2.2vh;
+			padding: 10px;
+			width: fit-content;
+		}
+
+		.sidebar {
+			width: 14vw;
+			height: 88vh;
+			border-top: 2px solid hsl(0, 0%, 100%);
+			border-right: 2px solid hsl(0, 0%, 100%);
+		}
+
+		.view {
+			width: 85vw;
+			height: 88vh;
+			margin-left: -2px;
+			border-top: 2px solid hsl(0, 0%, 100%);
+		}
+
+	</style>
 
 	<body>
+		<div class='topbar'>
+			<a href='/'>
+				<div class='logo'> LOGO </div>
+			</a>
+		</div>
+
+		<table>
+			<tr>
+				<td>
+					<div class='sidebar'> </div>
+				</td>
+				<td>
+					<div class='view'> </div>
+				</td>
+			</tr>
+		</table>
+
 		<script src="projects.js"></script>
 	</body>
 

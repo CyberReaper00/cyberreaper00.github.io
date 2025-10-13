@@ -2,7 +2,107 @@
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
+	<style>
+		@font-face {
+			font-family: 'milker';
+			src: url('./fonts/milker.otf') format('opentype');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'cascadia';
+			src: url('./fonts/cascadia-mono-bold.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body {
+			margin: 0;
+			color: white;
+			display: flex;
+			font-size: 2em;
+			line-height: 0.8em;
+			align-items: center;
+			justify-content: center;
+		}
+
+		h1, h3 {
+			font-family: milker;
+			letter-spacing: 3px;
+		}
+
+		.container {
+			margin-top: -100px;
+			text-align: center;
+		}
+
+		.button-div {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			gap: 10px;
+		}
+
+		.button {
+			color: white;
+			font-size: 18px;
+			padding: 12px 20px;
+			border: 2px white solid;
+			background: transparent;
+		}
+
+		.button:hover {
+			cursor: pointer;
+			background: #FFFFFF22;
+		}
+
+		.site-link {
+			right: 0;
+			bottom: 0;
+			margin: 10px;
+			position: fixed;
+			font-size: 14px;
+			padding: 4px 20px;
+			font-family: cascadia;
+			background: hsl(0, 0%, 0%);
+
+			a {
+				color: hsl(0, 0%, 90%);
+				text-decoration: none;
+			}
+		}
+
+		.site-link:hover {
+			cursor: pointer;
+			background: hsl(0, 0%, 10%);
+		}
+
+	</style>
+
 	<body>
+
+		<div class='container'>
+
+			<h1>Nahyan Siddiqui</h1>
+			<h3>Web/Software Engineer</h3>
+
+			<div class='button-div'>
+				<a href='https://github.com/CyberReaper00' target='_blank'>
+					<input class='button' type='button' value='Github'>
+				</a>
+				<a href='./projects.html' target='_blank'>
+					<input class='button' type='button' value='Projects'>
+				</a>
+			</div>
+
+		</div>
+
+		<div class='site-link'>
+			<a href='https://github.com/CyberReaper00/nahyan-siddiqui' target='_blank'>
+				Website Source Code
+			</a>
+		</div>
 
 		<script src="index.js"></script>
 	</body>
