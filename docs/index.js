@@ -21,7 +21,6 @@ change_bg_with_hsl()
 // code for the under construction sign
 const keyframes = {
 	opacity: [0, 1, 0],
-	backgroundColor: ["yellow", "transparent", "yellow"],
 }
 
 const timing = {
