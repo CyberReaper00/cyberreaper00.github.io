@@ -91,6 +91,43 @@
 			font-family: cascadia;
 		}
 
+		.screen_blur {
+			position: fixed;
+			top: 0;
+			left: 0;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			width: 100%;
+			height: 100%;
+
+			backdrop-filter: blur(5px);
+		}
+
+		.contribution_popup {
+			width: 30vw;
+			height: fit-content;
+
+			padding: 20px;
+			border: 3px solid white;
+
+			font-size: 20px;
+			font-family: sans;
+			background: #000000AA;
+
+			a {
+				color: white;
+				text-decoration: none;
+
+				p {
+					height: 0px;
+					overflow: hidden;
+				}
+			}
+		}
+
 	</style>
 
 	<body>
@@ -108,10 +145,36 @@
 				<a href='#' class='warn'>
 					<input class='button' type='button' value='Projects'>
 				</a>
+
+				<a href='#' class='warn'>
+					<input class='button' type='button' value='Contributions'>
+				</a>
 			</div>
 
 			<div class='warning_box'>
 				⚠️ Under Construction ⚠️
+			</div>
+
+			<div class='screen_blur'>
+		
+				<div class='contribution_popup'>
+					<a href='https://wiki.nixos.org/wiki/Chromium'>
+						<b>Updating browser policies</b>
+						<p>
+						Added a new section in the NixOS wiki on how to update chromium policies
+						The section is called Updating browser policies
+						</p>
+					</a>
+
+					<a href='#'>
+						<b>Added a new patch to my window manager</b>
+						<p>
+							I added a new optional feature to the dwm source code which allows the user to change the color of their WM status bar to a different color when their laptop charger is unplugged
+							This patch is written in C
+						</p>
+					</a>
+				</div>
+
 			</div>
 
 		</div>

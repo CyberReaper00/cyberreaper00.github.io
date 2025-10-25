@@ -19,11 +19,11 @@ async function change_bg_with_hsl() {
 change_bg_with_hsl()
 
 // code for the under construction sign
-const keyframes = {
+const under_construction_sign_frames = {
 	opacity: [0, 1, 0],
 }
 
-const timing = {
+const under_construction_sign_timing = {
 	duration: 1000,
 }
 
@@ -32,6 +32,24 @@ warning_box = document.querySelector('.warning_box')
 
 incomplete_pieces.forEach(piece => {
 	piece.addEventListener("click", () => {
-		warning_box.animate(keyframes, timing)
+		warning_box.animate(under_construction_sign_frames, under_construction_sign_timing)
+	})
+})
+
+// code for scrolling text on popup
+const scrolling_text_frames = {
+	height: ["fit-content"],
+}
+
+const scrolling_text_timing = {
+	duration: 1000,
+}
+
+ptags_in_atags = document.querySelectorAll('.contribution_popup a p')
+console.log(`tags: ${JSON.stringify(ptags_in_atags)}`)
+
+ptags_in_atags.forEach(tag => {
+	tag.addEventListener("mouseenter", () => {
+		tag.animate(scrolling_text_frames, scrolling_text_timing)
 	})
 })
