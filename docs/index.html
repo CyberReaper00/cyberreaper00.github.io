@@ -1,0 +1,213 @@
+<html>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+	<style>
+		@font-face {
+			font-family: 'milker';
+			src: url('./fonts/milker.otf') format('opentype');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-family: 'cascadia';
+			src: url('./fonts/cascadia-mono-bold.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body {
+			margin: 0;
+			color: white;
+			display: flex;
+			font-size: 2em;
+			line-height: 0.8em;
+			align-items: center;
+			justify-content: center;
+		}
+
+		h1, h3 {
+			font-family: milker;
+			letter-spacing: 3px;
+		}
+
+		h1 { margin-top: 60%; }
+
+		.container { text-align: center; }
+
+		.button-div {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			gap: 10px;
+		}
+
+		.button {
+			color: white;
+			font-size: 18px;
+			font-family: cascadia;
+
+			padding: 12px 20px;
+			border: 2px white solid;
+			background: transparent;
+		}
+
+		.button:hover {
+			cursor: pointer;
+			background: #FFFFFF22;
+		}
+
+		.site-link {
+			right: 0;
+			bottom: 0;
+			margin: 10px;
+			position: fixed;
+			font-size: 14px;
+			padding: 4px 20px;
+			font-family: cascadia;
+			color: hsl(0, 0%, 90%);
+			background: hsl(0, 0%, 0%);
+
+			a { text-decoration: none; }
+		}
+
+		.site-link:hover {
+			cursor: pointer;
+			background: hsl(0, 0%, 10%);
+		}
+
+		.warning_box {
+			opacity: 0;
+			padding: 10px;
+			margin-top: 20px;
+			justify-self: center;
+
+			width: fit-content;
+			border: 4px solid yellow;
+
+			font-size: 16px;
+			font-family: cascadia;
+		}
+
+		.modal {
+			position: fixed;
+			top: 0;
+			left: 0;
+
+			display: none;
+			justify-content: center;
+			align-items: center;
+
+			width: 100%;
+			height: 100%;
+
+			backdrop-filter: blur(5px);
+		}
+
+		.contribution_popup {
+			width: 30vw;
+			height: fit-content;
+
+			padding: 20px;
+			border: 3px solid white;
+
+			font-size: 20px;
+			font-family: sans;
+			background: #000000AA;
+
+			a {
+				color: white;
+				text-decoration: none;
+
+				p {
+					height: 0px;
+					overflow: hidden;
+				}
+			}
+		}
+
+		.blurb {
+			padding: 10% 10% 6%;
+
+			width: 80%;
+			font-size: 0.7em;
+			font-family: cascadia;
+		}
+
+	</style>
+
+	<body>
+
+		<div class='container'>
+
+			<h1>Nahyan Siddiqui</h1>
+			<h3>Web/Software Engineer</h3>
+
+			<div class='button-div'>
+				<a href='https://github.com/CyberReaper00' target='_blank'>
+					<input class='button' type='button' value='Github'>
+				</a>
+
+				<!-- <a href='./projects'> -->
+				<!-- 	<input class='button' type='button' value='Projects'> -->
+				<!-- </a> -->
+
+				<!-- <a href='#' class='warn'> -->
+				<!-- 	<input class='button contributions' type='button' value='Contributions'> -->
+				<!-- </a> -->
+			</div>
+
+			<div class='warning_box'>
+				⚠️ Under Construction ⚠️
+			</div>
+
+			<div class='blurb'>
+				<p>
+					My name is Nahyan Siddiqui and i have been programming for around seven years, i have plenty of experience working with theweb and software alike, i have created many websites over the years of varying difficulty and the same can be said of software
+					<br>
+					<br>
+					I have built many projects in many languages of which i am well versed in Go and python - but i prefer to work in Go as it is a faster and more robust language - and of course the web languages (html, css, js), i have also have good knowledge of Lua and C99 as i have used them from time to time to make small projects as needed
+					<br>
+					<br>
+					I also have some experience working with assembly to determine the performance of a program and perform the necessary optimizations to make it work faster and have less resource usage
+					<br>
+					<br>
+					As for systems, i have years of exprience with both Windows and Linux as well as powershell and bash, i have used the terminal extensively for the past few years, and continue to do so, for my work in making applications and simple interfaces for custom programs that are or might be needed for internal company use or purely for customers
+				</p>
+			</div>
+
+			<div class='modal'>
+		
+				<div class='contribution_popup'>
+					<a href='https://wiki.nixos.org/wiki/Chromium'>
+						<b>Updating browser policies</b>
+						<p>
+						Added a new section in the NixOS wiki on how to update chromium policies
+						The section is called Updating browser policies
+						</p>
+					</a>
+
+					<a href='#'>
+						<b>Added a new patch to my window manager</b>
+						<p>
+							I added a new optional feature to the dwm source code which allows the user to change the color of their WM status bar to a different color when their laptop charger is unplugged
+							This patch is written in C
+						</p>
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+
+		<a href='https://github.com/CyberReaper00/cyberreaper00.github.io' target='_blank'>
+			<div class='site-link'>
+				Website Source Code
+			</div>
+		</a>
+
+		<script src="main.js"></script>
+	</body>
+
+</html>

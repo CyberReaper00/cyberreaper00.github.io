@@ -1,0 +1,59 @@
+const HUE_MAX = 360
+
+let hue = 0
+let lightness_direction = 1
+
+b_style = document.body.style
+
+b_style.backgroundAttachment = 'fixed'
+
+// function that creates the background color change effect
+async function change_bg_with_hsl() {
+	while (true) {
+		hue = (hue + 2) % HUE_MAX
+
+		const color1 = 'black'
+		const color2 = `hsl(${hue + 180}, 100%, 10%)`
+
+		b_style.backgroundImage = `linear-gradient(to bottom right, ${color1}, ${color2})`
+
+		await new Promise(resolve => setTimeout(resolve, 200))
+	}
+}
+change_bg_with_hsl()
+
+// code for the under construction sign
+const under_construction_sign_frames = {
+	opacity: [0, 1, 0],
+}
+
+const under_construction_sign_timing = {
+	duration: 1000,
+}
+
+incomplete_pieces = document.querySelectorAll('.warn')
+warning_box = document.querySelector('.warning_box')
+
+incomplete_pieces.forEach(piece => {
+	piece.addEventListener("click", () => {
+		warning_box.animate(under_construction_sign_frames, under_construction_sign_timing)
+	})
+})
+
+// code for scrolling text on popup
+const scrolling_text_frames = {
+	height: ["fit-content"],
+}
+
+const scrolling_text_timing = {
+	duration: 1000,
+}
+
+ptags_in_atags = document.querySelectorAll('.contribution_popup a p')
+console.log(`tags: ${JSON.stringify(ptags_in_atags)}`)
+
+ptags_in_atags.forEach(tag => {
+	tag.addEventListener("mouseenter", () => {
+		tag.animate(scrolling_text_frames, scrolling_text_timing)
+	})
+})
