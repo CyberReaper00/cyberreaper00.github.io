@@ -3,6 +3,10 @@ const HUE_MAX = 360
 let hue = 0
 let lightness_direction = 1
 
+b_style = document.body.style
+
+b_style.backgroundAttachment = 'fixed'
+
 // function that creates the background color change effect
 async function change_bg_with_hsl() {
 	while (true) {
@@ -11,7 +15,7 @@ async function change_bg_with_hsl() {
 		const color1 = 'black'
 		const color2 = `hsl(${hue + 180}, 100%, 10%)`
 
-		document.body.style.backgroundImage = `linear-gradient(to bottom right, ${color1}, ${color2})`
+		b_style.backgroundImage = `linear-gradient(to bottom right, ${color1}, ${color2})`
 
 		await new Promise(resolve => setTimeout(resolve, 200))
 	}
